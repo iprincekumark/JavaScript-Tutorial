@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo04</title>
+    <style>
+        main {
+            display: flex;
+            gap: 4%;
+        }
+        button, #result {
+            margin-top: 5%;
+            margin-bottom: 0.5%;
+            margin-right: 0.3%;
+        }
+        .button {
+            display: flex;
+            gap: 3px;
+        }
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            font-size: 0.7rem;
+        }
+        code {
+            color: white;
+        }
+        .ans {
+            margin-top: 5%;
+        }
+
+        @media only screen and (max-width:600px) {  
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+      function evenOrOdd() {
+        var num = parseInt(document.getElementById("num").value);
+
+        if (num % 2 == 0) {
+          document.getElementById("result").innerHTML = num + " is a Even Number";
+        } else {
+          document.getElementById("result").innerHTML = num + " is a Odd Number";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+        <div class="box-1">
+        <h3>Javascript code to check and display the number is Even or Odd?</h3>
+            <pre>
+                <code>
+&lt;script type=&quot;text/javascript&quot;&gt;  
+
+    function evenOrOdd() {
+        var num = parseInt(document.getElementById("num").value);
+
+        if (num % 2 == 0) {
+            document.getElementById("result").innerHTML = num + " is a Even Number";
+        } else {
+            document.getElementById("result").innerHTML = num + " is a Odd Number";
+        }
+    }
+
+&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="box-2">
+            <h3>OUTPUT</h3>
+            Enter a Number: <input type="text" id="num" /> <br />
+            <button onclick="evenOrOdd()">Even/Odd</button>
+            <div class="ans">
+            <div id="result"></div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

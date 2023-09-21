@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        main {
+            display: flex;
+            gap: 4%;
+        }
+        h3 {
+            text-align: left;
+        }
+        pre {
+            /*
+            background-color: #f4f4f4; 
+            */
+            background-color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            font-size: 0.7rem;
+        }
+        code {
+            color: white;
+        }
+
+        .ans {
+            margin-top: 5%;
+        }
+
+        @media only screen and (max-width:600px) {  
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function calculate() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            
+            var sum = num1 + num2;
+            var sub = num1 - num2;
+            var mul = num1 * num2;
+            var rem = num1 % num2;
+            var quotient = num1 / num2;
+            
+            document.getElementById('result-sum').innerHTML = 'Sum: ' + sum;
+            document.getElementById('result-sub').innerHTML = 'Subtraction: ' + sub;
+            document.getElementById('result-mul').innerHTML = 'Multiplication: ' + mul;
+            document.getElementById('result-rem').innerHTML = 'Remainder: ' + rem;
+            document.getElementById('result-quotient').innerHTML = 'Quotient: ' + quotient;  
+        }
+    </script>
+</head>
+<body>
+    <main class="main">
+        <div class="box-1">
+            <h3>Javascript Code to calculate: <br/>Sum, Substraction, Multiplication, Remainder and Quotient?</h3>
+            <pre>
+                <code>
+&lt;script type=&quot;text/javascript&quot;&gt;  
+
+    function calculate() {
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+                            
+        var sum = num1 + num2;
+        var sub = num1 - num2;
+        var mul = num1 * num2;
+        var rem = num1 % num2;
+        var quotient = num1 / num2;
+                            
+        document.getElementById('result-sum').innerHTML = 'Sum: ' + sum;
+        document.getElementById('result-sub').innerHTML = 'Subtraction: ' + sub;
+        document.getElementById('result-mul').innerHTML = 'Multiplication: ' + mul;
+        document.getElementById('result-rem').innerHTML = 'Remainder: ' + rem;
+        document.getElementById('result-quotient').innerHTML = 'Quotient: ' + quotient; 
+    }
+
+&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+        
+        <div class="box-2">
+            <div class="heading1">
+            <h2 id="heading-1">OUTPUT</h2>
+            </div>
+            Enter Number1: <input type="text" id="num1"><br/>
+            Enter Number2: <input type="text" id="num2"><br/><br/>
+            <button onclick="calculate()">Calculate</button><br>
+
+            <div class="ans">
+                <div id="result-sum"></div>
+                <div id="result-sub"></div>
+                <div id="result-mul"></div>
+                <div id="result-rem"></div>
+                <div id="result-quotient"></div> 
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+    <style>
+        * {
+            background-color: black;
+        }
+        header {
+            text-align: center;
+            color: white;
+        }
+        /*
+        iframe {
+            border: 2px solid red;
+        }
+        */
+        #iframe-left {
+            height: 84.5vh;
+            width: 98vw;
+            background-color: #c2ffd5;
+        }
+
+        .main-container {
+            display: flex;
+        }
+
+        @media only screen and (max-width:600px) {
+            #iframe-left {
+                height: 84.5vh;
+                width: 97vw;
+                background-color: #c2ffd5;
+            }
+
+            .main-container {
+                display: flex;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Coding Tutorial</h1>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="box-1">
+                <iframe id="iframe-left" name="iframeA" src="left-list.html"></iframe>
+            </div>
+            
+        </div>
+    </main>
+    
+</body>
+</html>

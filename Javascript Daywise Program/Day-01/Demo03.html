@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo03</title>
+    <style>
+        main {
+            display: flex;
+            gap: 4%;
+        }
+        .main {
+            margin-bottom: 1%;
+        }
+        .button {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            display: flex;
+            gap: 3px;
+        }
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            font-size: 0.7rem;
+        }
+        code {
+            color: white;
+        }
+        .ans {
+            margin-top: 1%;
+        }
+
+        @media only screen and (max-width:600px) {  
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script type="text/JavaScript">
+
+        function beforeSwap() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            document.getElementById('breforeSwap').innerHTML = "Before Swap <br/>" +
+            "num1 = " + num1 + "<br/>" + 
+            "num2 = " + num2 ;
+        }
+
+        function afterSwap() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            var temp = num1;
+            num1 = num2;
+            num2 = temp;
+
+            document.getElementById('afterSwap').innerHTML = "After Swap <br/>" +
+            "num1 = " + num1 + "<br/>" + 
+            "num2 = " + num2;
+        }
+
+    </script>
+
+</head>
+<body>
+    <main>
+        <div class="box-1">
+            <h3>Javascript Code to Swap two numbers?</h3>
+            <pre>
+                <code>
+&lt;script type=&quot;text/javascript&quot;&gt;  
+
+    function beforeSwap() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+
+        document.getElementById('breforeSwap').innerHTML = "Before Swap <br/>" + "num1 = " + num1 + "<br/>" + "num2 = " + num2 ;
+    }
+
+    function afterSwap() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+
+        var temp = num1;
+        num1 = num2;
+        num2 = temp;
+
+        document.getElementById('afterSwap').innerHTML = "After Swap <br/>" + "num1 = " + num1 + "<br/>" + "num2 = " + num2;
+    }
+
+&lt;/script&gt;
+    </code>
+    </pre>
+        </div>
+
+        <div class="box-2">
+            <h3>OUTPUT</h3>
+            <div class="main">
+                Enter Number1: <input type="text" id="num1" /> <br/>
+                Enter Number2: <input type="text" id="num2" /> <br/>
+            </div>
+
+            <div class="button">
+                <button onclick="beforeSwap()">BeforeSwap</button>
+                <button onclick="afterSwap()">AfterSwap</button>
+            </div>
+
+            
+            <div class="ans" id="breforeSwap"></div>
+            <div class="ans" id="afterSwap"></div>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        h3 {
+            text-align: left;
+        }
+
+        button, result {
+            margin-bottom: 0.5%;
+            margin-right: 0.3%;
+        }
+        main {
+            display: flex;
+            gap: 4%;
+        }
+        .button {
+            display: flex;
+            gap: 3px;
+        }
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            font-size: 0.7rem;
+        }
+        code {
+            color: white;
+        }
+        .ans {
+            margin-top: 5%;
+        }
+
+        @media only screen and (max-width:600px) {  
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var sum = num1 + num2;
+            document.getElementById('result').innerHTML = 'Sum: ' + sum;
+        }
+
+        function calculateSubtract() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var sub = num1 - num2;
+            document.getElementById('result').innerHTML = 'Subtraction: ' + sub;
+        }
+
+        function calculateMultiply() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var mul = num1 * num2;
+            document.getElementById('result').innerHTML = 'Multiplication: ' + mul;
+        }
+
+        function calculateModulus() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var rem = num1 % num2;
+            document.getElementById('result').innerHTML = 'Remainder: ' + rem;
+        }
+
+        function calculateQuotient() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var quotient = num1 / num2;
+            document.getElementById('result').innerHTML = 'Quotient: ' + quotient;
+        }
+    </script>
+</head>
+<body>
+    <heading class="heading">
+    </heading>
+    <main class="main">
+        <div class="box-1">
+            <h3>Javascript Code to calculate with seperate button for each operation: <br/>Sum, Substraction, Multiplication, Remainder and Quotient?</h3>
+            <pre>
+                <code>
+&lt;script type=&quot;text/javascript&quot;&gt;  
+
+    function calculateSum() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var sum = num1 + num2;
+            document.getElementById('result').innerHTML = 'Sum: ' + sum;
+        }
+
+        function calculateSubtract() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var sub = num1 - num2;
+            document.getElementById('result').innerHTML = 'Subtraction: ' + sub;
+        }
+
+        function calculateMultiply() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var mul = num1 * num2;
+            document.getElementById('result').innerHTML = 'Multiplication: ' + mul;
+        }
+
+        function calculateModulus() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var rem = num1 % num2;
+            document.getElementById('result').innerHTML = 'Remainder: ' + rem;
+        }
+
+        function calculateQuotient() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var quotient = num1 / num2;
+            document.getElementById('result').innerHTML = 'Quotient: ' + quotient;
+        }
+
+&lt;/script&gt;
+    </code>
+    </pre>
+        </div>
+
+        <div class="box-2">
+            <h2 id="heading-1">OUTPUT</h2>
+            Enter Number1: <input type="text" id="num1"><br/>
+            Enter Number2: <input type="text" id="num2"><br/><br/>
+            <div class="button">
+                <button onclick="calculateSum()">Sum</button>
+                <button onclick="calculateSubtract()">Subtract</button>
+                <button onclick="calculateMultiply()">Multiply</button>
+                <button onclick="calculateModulus()">Remainder</button>
+                <button onclick="calculateQuotient()">Quotient</button>
+            </div>
+            <div class="ans">
+                <div id="result"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
